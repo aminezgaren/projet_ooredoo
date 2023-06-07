@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230607 10:54:02.226" rpa="false" schemaversion="3">
+<suite id="s1" name="Espace Client" source="C:\Users\amine\PycharmProjects\Ooredoo\Tests\espace_client.robot">
+<test id="s1-t1" name="tc6: form" line="69">
+<kw name="Open espace client">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${BROWSER 1}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230607 10:54:02.396" level="INFO">Opening browser 'chrome' to base url 'https://connexion.ooredoo.tn/cas-server/login?service=https://espaceclient.ooredoo.tn/'.</msg>
+<status status="PASS" starttime="20230607 10:54:02.396" endtime="20230607 10:54:04.250"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230607 10:54:04.250" endtime="20230607 10:54:04.368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=.region.region-content</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230607 10:54:04.368" endtime="20230607 10:54:04.407"/>
+</kw>
+<status status="PASS" starttime="20230607 10:54:02.396" endtime="20230607 10:54:04.407"/>
+</kw>
+<kw name="login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="username"]</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:04.407" level="INFO">Typing text '24042092' into text field '//*[@id="username"]'.</msg>
+<status status="PASS" starttime="20230607 10:54:04.407" endtime="20230607 10:54:04.576"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:04.586" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20230607 10:54:04.576" endtime="20230607 10:54:04.704"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="edit-actions"]/input[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:04.706" level="INFO">Clicking button '//*[@id="edit-actions"]/input[2]'.</msg>
+<status status="PASS" starttime="20230607 10:54:04.704" endtime="20230607 10:54:11.034"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>https://espaceclient.ooredoo.tn/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230607 10:54:11.035" endtime="20230607 10:54:11.061"/>
+</kw>
+<status status="PASS" starttime="20230607 10:54:04.407" endtime="20230607 10:54:11.062"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230607 10:54:21.064" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230607 10:54:11.062" endtime="20230607 10:54:21.064"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[7]/div[1]/div[1]/div[2]/ul[1]/li[1]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:21.065" level="INFO">Clicking element '//body/div[7]/div[1]/div[1]/div[2]/ul[1]/li[1]/a[1]'.</msg>
+<status status="PASS" starttime="20230607 10:54:21.065" endtime="20230607 10:54:22.966"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Mes informations personnelles</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230607 10:54:22.967" endtime="20230607 10:54:22.984"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>updateProfile[gender]</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230607 10:54:22.984" level="INFO">Selecting 'M' from radio button 'updateProfile[gender]'.</msg>
+<status status="PASS" starttime="20230607 10:54:22.984" endtime="20230607 10:54:23.011"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='updateProfile_last_name']</arg>
+<arg>robert</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:23.012" level="INFO">Typing text 'robert' into text field '//input[@id='updateProfile_last_name']'.</msg>
+<status status="PASS" starttime="20230607 10:54:23.012" endtime="20230607 10:54:23.141"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='updateProfile_first_name']</arg>
+<arg>zgaren</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:23.142" level="INFO">Typing text 'zgaren' into text field '//input[@id='updateProfile_first_name']'.</msg>
+<status status="PASS" starttime="20230607 10:54:23.142" endtime="20230607 10:54:23.252"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>updateProfile_birthday_day</arg>
+<arg>27</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230607 10:54:23.253" level="INFO">Selecting options from selection list 'updateProfile_birthday_day' by label 27.</msg>
+<status status="PASS" starttime="20230607 10:54:23.252" endtime="20230607 10:54:23.302"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>updateProfile_birthday_month</arg>
+<arg>mars</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230607 10:54:23.303" level="INFO">Selecting options from selection list 'updateProfile_birthday_month' by label mars.</msg>
+<status status="PASS" starttime="20230607 10:54:23.303" endtime="20230607 10:54:23.350"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>updateProfile_birthday_year</arg>
+<arg>1995</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230607 10:54:23.351" level="INFO">Selecting options from selection list 'updateProfile_birthday_year' by label 1995.</msg>
+<status status="PASS" starttime="20230607 10:54:23.351" endtime="20230607 10:54:23.400"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='updateProfile_email']</arg>
+<arg>amine@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:23.401" level="INFO">Typing text 'amine@gmail.com' into text field '//input[@id='updateProfile_email']'.</msg>
+<status status="PASS" starttime="20230607 10:54:23.401" endtime="20230607 10:54:23.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id='updateProfile_cin']</arg>
+<arg>08776542</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:23.530" level="INFO">Typing text '08776542' into text field '//input[@id='updateProfile_cin']'.</msg>
+<status status="PASS" starttime="20230607 10:54:23.529" endtime="20230607 10:54:23.652"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>updateProfile_countries</arg>
+<arg>TN</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230607 10:54:23.652" level="INFO">Selecting options from selection list 'updateProfile_countries' by label TN.</msg>
+<status status="PASS" starttime="20230607 10:54:23.652" endtime="20230607 10:54:23.724"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>updateProfile_city</arg>
+<arg>Ariana</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230607 10:54:23.725" level="INFO">Selecting options from selection list 'updateProfile_city' by label Ariana.</msg>
+<status status="PASS" starttime="20230607 10:54:23.724" endtime="20230607 10:54:23.769"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//textarea[@id='updateProfile_address']</arg>
+<arg>rue 15 octobre</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:23.770" level="INFO">Typing text 'rue 15 octobre' into text field '//textarea[@id='updateProfile_address']'.</msg>
+<status status="PASS" starttime="20230607 10:54:23.769" endtime="20230607 10:54:23.875"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//*[@id="updateProfile_pictureName"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230607 10:54:23.878" endtime="20230607 10:54:24.166"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>id:updateProfile_pictureName</arg>
+<arg>C:/Users/amine/PycharmProjects/Ooredoo/Ressources/img.JPG</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230607 10:54:24.167" level="INFO">Sending C:\Users\amine\PycharmProjects\Ooredoo\Ressources\img.JPG to browser.</msg>
+<status status="PASS" starttime="20230607 10:54:24.167" endtime="20230607 10:54:24.199"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230607 10:54:29.199" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230607 10:54:24.199" endtime="20230607 10:54:29.199"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="updateProfile_save"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230607 10:54:29.199" level="INFO">Clicking element '//*[@id="updateProfile_save"]'.</msg>
+<status status="PASS" starttime="20230607 10:54:29.199" endtime="20230607 10:54:34.274"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@id='updateProfile_pictureName']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230607 10:54:39.416" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230607 10:54:39.416" level="FAIL">Element '//input[@id='updateProfile_pictureName']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20230607 10:54:34.274" endtime="20230607 10:54:39.426"/>
+</kw>
+<tag>tc6</tag>
+<status status="FAIL" starttime="20230607 10:54:02.396" endtime="20230607 10:54:39.426">Element '//input[@id='updateProfile_pictureName']' not visible after 5 seconds.</status>
+</test>
+<doc>test suite sur l'espace client</doc>
+<status status="FAIL" starttime="20230607 10:54:02.226" endtime="20230607 10:54:39.426"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">tc6</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Espace Client">Espace Client</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
